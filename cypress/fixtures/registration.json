@@ -1,0 +1,12 @@
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "address": "123 Main St",
+  "city": "Springfield",
+  "state": "IL",
+  "zipCode": "62704",
+  "phoneNum": "5551234567",
+  "ssn": "123-45-6789",
+  "username": "johndoe123",
+  "password": "Password!23"
+}

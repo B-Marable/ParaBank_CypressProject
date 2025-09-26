@@ -1,0 +1,18 @@
+{
+  "name": "parabank_cypressproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:All": "npx cypress run",
+    "test:Login": "npx cypress run --spec cypress/e2e/test_login.cy.js",
+    "test:Registration": "npx cypress run --spec cypress/e2e/test_registration.cy.js",
+    "test:AllHeaded": "npx cypress run --headed"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@cypress/xpath": "^2.0.3"
+  }
+}
