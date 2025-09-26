@@ -14,5 +14,8 @@
   "type": "module",
   "dependencies": {
     "@cypress/xpath": "^2.0.3"
+  },
+  "devDependencies": {
+    "cypress": "^15.3.0"
   }
 }
