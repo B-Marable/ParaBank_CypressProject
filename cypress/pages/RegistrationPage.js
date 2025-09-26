@@ -1,17 +1,18 @@
 // LOCATORS
 
-// const firstName = "#customer.firstName";
-// const lastName = "#customer.lastName";
-// const address = "#customer.address.street";
-// const city = "#customer.address.city";
-// const state = "#customer.address.state";
-// const zipCode = "#customer.address.zipCode";
-// const phoneNum = "#customer.phoneNumber";
-// const ssn = "#customer.ssn";
-// const username = "#customer.username";
-// const password = "#customer.password";
-// const confirmPass = "#repeatedPassword";
-// const registerBtn = 'input[value="Register"]';
+const registerBtnLink = '//a[contains(text(), "Register")]';
+const firstName = '//input[@name="customer.firstName"]';
+const lastName = '//input[@name="customer.lastName"]';
+const address = '//input[@name="customer.address.street"]';
+const city = '//input[@name="customer.address.city"]';
+const state = '//input[@name="customer.address.state"]';
+const zipCode = '//input[@name="customer.address.zipCode"]';
+const phoneNum = '//input[@name="customer.phoneNumber"]';
+const ssn = '//input[@name="customer.ssn"]';
+const username = '//input[@name="customer.username"]';
+const password = '//input[@name="customer.password"]';
+const confirmPass = '//input[@name="repeatedPassword"]';
+const registerBtn = '//input[@class="button" and @value="Register"]';
 
 export function launchParaBankSite() {
   cy.visit("https://parabank.parasoft.com/parabank/index.htm");
@@ -30,29 +31,17 @@ export function registerUser(
   pass,
   cPass
 ) {
-  cy.xpath('//a[contains(text(), "Register")]').click();
-  cy.xpath('//input[@name="customer.firstName"]').type(fName);
-  cy.xpath('//input[@name="customer.lastName"]').type(lName);
-  cy.xpath('//input[@name="customer.address.street"]').type(add);
-  cy.xpath('//input[@name="customer.address.city"]').type(cit);
-  cy.xpath('//input[@name="customer.address.state"]').type(sta);
-  cy.xpath('//input[@name="customer.address.zipCode"]').type(zip);
-  cy.xpath('//input[@name="customer.phoneNumber"]').type(phone);
-  cy.xpath('//input[@name="customer.ssn"]').type(ss);
-  cy.xpath('//input[@name="customer.username"]').type(uName);
-  cy.xpath('//input[@name="customer.password"]').type(pass);
-  cy.xpath('//input[@name="repeatedPassword"]').type(cPass);
-  // cy.xpath('//input[@class="button" and @value="Register"]').click();
-
-  // cy.get(firstName).type(fName);
-  // cy.get(lastName).type(lName);
-  // cy.get(address).type(add);
-  // cy.get(city).type(cit);
-  // cy.get(state).type(sta);
-  // cy.get(zipCode).type(zip);
-  // cy.get(phoneNum).type(phone);
-  // cy.get(ssn).type(ss);
-  // cy.get(username).type(uName);
-  // cy.get(password).type(pass);
-  // cy.get(confirmPass).type(cPass);
+  cy.xpath(registerBtnLink).click();
+  cy.xpath(firstName).type(fName);
+  cy.xpath(lastName).type(lName);
+  cy.xpath(address).type(add);
+  cy.xpath(city).type(cit);
+  cy.xpath(state).type(sta);
+  cy.xpath(zipCode).type(zip);
+  cy.xpath(phoneNum).type(phone);
+  cy.xpath(ssn).type(ss);
+  cy.xpath(username).type(uName);
+  cy.xpath(password).type(pass);
+  cy.xpath(confirmPass).type(cPass);
+  // cy.xpath(registerBtn).click();
 }

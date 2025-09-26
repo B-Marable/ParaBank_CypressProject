@@ -1,7 +1,6 @@
 import { launchParaBankSite } from "../pages/RegistrationPage";
 import {
   login,
-  assertWelcomeHeading,
   assertAccountsOverviewHeading,
   assertErrorMsg,
 } from "../pages/LoginPage";
