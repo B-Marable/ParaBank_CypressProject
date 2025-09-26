@@ -43,4 +43,16 @@ export function registerUser(
   cy.xpath('//input[@name="customer.password"]').type(pass);
   cy.xpath('//input[@name="repeatedPassword"]').type(cPass);
   // cy.xpath('//input[@class="button" and @value="Register"]').click();
+
+  // cy.get(firstName).type(fName);
+  // cy.get(lastName).type(lName);
+  // cy.get(address).type(add);
+  // cy.get(city).type(cit);
+  // cy.get(state).type(sta);
+  // cy.get(zipCode).type(zip);
+  // cy.get(phoneNum).type(phone);
+  // cy.get(ssn).type(ss);
+  // cy.get(username).type(uName);
+  // cy.get(password).type(pass);
+  // cy.get(confirmPass).type(cPass);
 }
